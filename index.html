@@ -7,7 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <link rel="stylesheet" type="text/css" href="Resources/css/estilo.css">
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script type="text/javascript" src="Resources/js/vue.js"></script>
+
   
 </head>
 
@@ -16,8 +18,24 @@
   <div>
     <img src="Resources/img/Logo.png">
   </div>
-
+  
   <div id="cards">
+
+    <poke-card 
+              v-for="pokemon in pokemons"
+              :name="pokemon.name"       
+              :type="pokemon.type"       
+              :hp="pokemon.hp"
+              :attack="pokemon.attack"
+              :defense="pokemon.defense"
+              :spattack="pokemon.spattack"
+              :spdefense="pokemon.spdefense"
+              :speed="pokemon.speed"
+              :ability1="pokemon.ability1"
+              :ability2="pokemon.ability2"
+              :imagen="pokemon.imagen"            
+              :estilo="pokemon.estilo"
+        ></poke-card>
     
   </div>
 
