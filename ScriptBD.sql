@@ -1,32 +1,7 @@
 CREATE DATABASE pokedex
 GO
-CREATE TABLE IF NOT EXISTS pokemon(
-    idPokemon INT NOT NULL AUTO_INCREMENT COMMENT 'Clave primaria',
-    nombre VARCHAR(50),
-    tipo VARCHAR(50),
-    hp INT,
-    ataque INT,
-    defensa INT,
-    spAtaque INT,
-    spDefensa INT,
-    velocidad INT,
-    habilidad1 VARCHAR(200),
-    habilidad2 VARCHAR(200),
-    imagen VARCHAR(300),
-    estilo VARCHAR(50),
-    PRIMARY KEY (idPokemon)
-)
-GO
-CREATE USER 'bdcrud'@'localhost' IDENTIFIED BY ''
-GO
-GRANT ALL PRIVILEGES ON * . * TO 'bdcrud'@'localhost'
-Go
-
-GO
-SELECT * FROM pokedex.pokemon
-GO
 CREATE TABLE pokemon  ( 
-	idPokemon 	INT(11) NOT NULL,
+	iidPokemon      INT NOT NULL AUTO_INCREMENT COMMENT 'Clave primaria',
 	nombre    	VARCHAR(50) NULL,
 	tipo      	VARCHAR(50) NULL,
 	hp        	INT(11) NULL,
@@ -38,9 +13,15 @@ CREATE TABLE pokemon  (
 	habilidad1	VARCHAR(200) NULL,
 	habilidad2	VARCHAR(200) NULL,
 	imagen    	VARCHAR(300) NULL,
-	estilo    	VARCHAR(50) NULL 
-	)
+	estilo    	VARCHAR(50) NULL,
+	PRIMARY KEY (idPokemon)
+)
 GO
+CREATE USER 'bdcrud'@'localhost' IDENTIFIED BY ''
+GO
+GRANT ALL PRIVILEGES ON * . * TO 'bdcrud'@'localhost'
+GO
+
 INSERT INTO pokemon(idPokemon, nombre, tipo, hp, ataque, defensa, spAtaque, spDefensa, velocidad, habilidad1, habilidad2, imagen, estilo)
   VALUES(1, 'Eevee', 'normal', 55, 55, 50, 45, 65, 55, 'Run Away', 'Anticipation', 'Resources/img/1200px-133Eevee.png', 'card card--normal')
 GO
