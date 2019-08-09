@@ -74,7 +74,7 @@ var vm = new Vue({
 	methods:{
 
 		listar() {
-			axios.get('Controller/ControllerPokemon.php',{
+			axios.get('../DAO/DAOPokemon.php',{
 				params:{
 	    			'funcion': 1,
 	    		}
