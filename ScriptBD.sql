@@ -1,7 +1,7 @@
 CREATE DATABASE pokedex
 GO
 CREATE TABLE pokemon  ( 
-	iidPokemon      INT NOT NULL AUTO_INCREMENT COMMENT 'Clave primaria',
+	idPokemon      INT NOT NULL AUTO_INCREMENT COMMENT 'Clave primaria',
 	nombre    	VARCHAR(50) NULL,
 	tipo      	VARCHAR(50) NULL,
 	hp        	INT(11) NULL,

@@ -55,7 +55,7 @@ Vue.component('poke-card',{
 	      </figure>
 		</div>
 	`
-})
+});
 
 
 var vm = new Vue({
@@ -74,7 +74,7 @@ var vm = new Vue({
 	methods:{
 
 		listar() {
-			axios.get('../DAO/DAOPokemon.php',{
+			axios.get('DAO/DAOPokemon.php',{
 				params:{
 	    			'funcion': 1,
 	    		}
